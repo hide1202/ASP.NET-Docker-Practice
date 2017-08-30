@@ -13,3 +13,14 @@
     - Build this project
 - `dotnet run`
     - Run local program
+
+## Use docker
+### Build
+- `docker build -t ${IMAGE_NAME} .`
+    - or `docker build -f Dockerfile -t ${IMAGE_NAME}`
+
+### Run
+- `docker run -p 5000:5000 ${IMAGE_NAME}`
+
+### Test
+- Connect in your browser : `http://localhost:5000`
