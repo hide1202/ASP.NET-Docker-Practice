@@ -17,8 +17,9 @@ namespace ASP_NET_Docker_Practice
             BuildWebHost(args).Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
+        public static IWebHost BuildWebHost(string[] args)
+            => WebHost.CreateDefaultBuilder(args)
+                .UseUrls("http://*:5000")
                 .UseStartup<Startup>()
                 .Build();
     }
